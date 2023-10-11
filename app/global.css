@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: rgb(255, 255, 255);
+}
+
+.content {
+  margin-left: 180px;
+  margin-top: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  max-width: calc(100% - 20%);
+  margin-right: 10%;
+  width: 80%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.section {
+  margin-bottom: 100px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border: 2px solid azure;
+  flex: 1;
+  width: 95%;
+  padding: 20px;
+}
+
+.profile {
+  max-width: 100%;
+  max-height: 100%;
+  width: 400px;
+  overflow: hidden;
+}
+
+.profile .imgHome {
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 4/3;
+}
+
+.profile.title {
+  padding-top: 5%;
+  text-align: center;
+  border: 2px solid azure;
+  margin-bottom: 60px;
+  animation: teclear 3s steps(13) efecto 0.5s step-end infinite;
+}
+
+.profile.title h1 {
+  animation: teclear 3s steps(13) efecto 0.5s step-end infinite;
+}
+
+@keyframes teclear {
+  from {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes efecto {
+  50% {
+    border-color: transparent;
+  }
+}
+.home {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding-bottom: 40px;
+}
+
+.profile img {
+  max-width: 100%;
+  height: auto;
+}
+
+.textarea {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.gallerySK {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Ajustes para cada celda en el flex (3 columnas) */
+.gallerySK div {
+  flex: 0 0 calc(33.33% - 20px);
+  max-width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  text-align: center;
+}
+/* Ajustes para las imágenes (tamaño máximo de 80px) */
+.gallerySK img {
+  max-width: 80px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.gallerySK img:hover {
+  transform: scale(1.2);
+  transition: all 0.4s ease;
+}
+
+.projects_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+}
+
+.card_porfolio {
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 1.5rem;
+  transition: all 0.4s ease;
+}
+
+.card_porfolio:hover {
+  background: none;
+}
+
+.card_porfolio img {
+  max-width: 100%;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.card_porfolio h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.2rem 0 2rem;
+}
+
+.card_btn {
+  max-height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card_btn .btn {
+  width: auto;
+}
+.card_btn .btn::after {
+  background: rgba(0, 0, 0, 0.2);
+}
+.card_btn .btn:hover {
+  background: white;
+  color: black;
+}
+
+@media (max-width: 776px) {
+  .content {
+    margin-left: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  p {
+    font-size: smaller;
+  }
+  .textarea {
+    padding: 0%;
+  }
+
+  .arrow {
+    display: none;
+  }
+  .btn_cv {
+    /* width: 80px; */
+    font-size: smaller;
+    padding: 8px 16px;
+  }
+}

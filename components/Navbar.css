@@ -1,0 +1,111 @@
+.menu {
+  position: fixed;
+  top: 0;
+  right: 10px;
+  width: 40px;
+  background-color: white;
+  border-radius: 10%;
+  display: grid;
+  z-index: 1;
+}
+
+.menu img {
+  max-width: 100%;
+  cursor: pointer;
+}
+.navbar {
+  padding-top: 5%;
+  background-color: rgb(0, 0, 0);
+  border-radius: 0 45px 45px 0;
+  padding: 10px;
+  height: 350px;
+  width: 150px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinear elementos a la izquierda */
+  /* transition: all 0.4s ease; */
+}
+
+.navbar ul {
+  padding-top: 25%;
+  list-style-type: none;
+}
+
+.navbar li {
+  margin: 5px 0;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar li p {
+  color: white;
+  font-size: 42px;
+  padding: 10px 20px;
+}
+
+.navbar li p:hover {
+  cursor: pointer;
+}
+
+.btn {
+  width: 100%;
+  height: 40px;
+  background-color: rgba(31, 31, 31, 0.999);
+  color: white;
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: white;
+}
+
+.navbar li button:hover a {
+  color: black;
+  text-decoration: underline;
+}
+
+.navbar.active {
+  transform: translateX(0);
+}
+
+/* .navbar {
+  background-color: white;
+}
+.navbar ul {
+  display: none;
+} */
+
+/* Estilo para la imagen de menú en dispositivos móviles */
+.menu {
+  display: none; /* Oculta el menú por defecto en pantallas no móviles */
+}
+
+/* Estilo para mostrar el menú en dispositivos móviles */
+.menu.active {
+  display: block; /* Muestra el menú cuando la clase 'active' está presente */
+  cursor: pointer;
+}
+
+/* Estilo para mostrar la lista de navegación en dispositivos móviles */
+.navbar-ul.active {
+  display: block; /* Muestra la lista cuando la clase 'active' está presente */
+}
+
+@media (max-width: 776px) {
+  .menu {
+    display: block;
+  }
+  .navbar {
+    display: none;
+  }
+  .navbar.active {
+    display: block;
+  }
+}
